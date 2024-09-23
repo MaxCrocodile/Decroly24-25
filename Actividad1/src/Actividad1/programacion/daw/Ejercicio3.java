@@ -6,17 +6,18 @@ public class Ejercicio3 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Que dimension tiene 1 latura del cuadrado");
-		int lat = scanner.nextLine();
+		System.out.print("Que dimension tiene 1 latura del cuadrado? \n");
+		int lat = scanner.nextInt();
 		
 		int area = lat*lat;
 		
-		System.out.println("Area del cuadrado es:" + area);
+		System.out.println("Area del cuadrado es: " + area);
 		
 		
 		
 		
 		
+		scanner.close();
 	}
 
 } 
