@@ -14,9 +14,6 @@ public class Ejercicio3 {
 		System.out.println("Area del cuadrado es: " + area);
 		
 		
-		
-		
-		
 		scanner.close();
 	}
 
