@@ -1,40 +1,37 @@
 package Actividad2.programacion.daw;
-import java.util.Scanner;  // Asegúrate de incluir esta línea
+
+import java.util.Scanner;
 
 public class Ejercicio9 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);  // Correcto uso del Scanner
-        boolean hayNegativo = false;  // Para verificar si hay algún número negativo
 
-        System.out.println("Introduce 10 números no nulos:");
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int hora, minutos, segundos;
+		
+		System.out.println("Escribe hora");
+		hora = sc.nextInt();
+		System.out.println("Escribe los minnutos");
+		minutos = sc.nextInt();
+		System.out.println("Escribe los segundos");
+		segundos = sc.nextInt();
+		
+		segundos++;
 
-        // Bucle para leer 10 números
-        for (int i = 0; i < 10; i++) {  
-            int numero;
-            
-            // Asegurarse de que el número no sea 0
-            do {
-                System.out.print("Número " + (i + 1) + ": ");
-                numero = scanner.nextInt();
-                
-                if (numero == 0) {
-                    System.out.println("El número no debe ser 0, por favor, introduce otro número.");
-                }
-            } while (numero == 0);
-
-            // Verificar si el número es negativo
-            if (numero < 0) {
-                hayNegativo = true;
-            }
+        if (segundos == 60) {
+            segundos = 00;
+            minutos++;
         }
-
-        // Resultado final
-        if (hayNegativo) {
-            System.out.println("Se ha leído al menos un número negativo.");
-        } else {
-            System.out.println("No se ha leído ningún número negativo.");
+        if(minutos == 60) {
+        	minutos = 00;
+        	hora++;
         }
+        if (hora == 24) {
+        	hora = 00;
+        	System.out.println("Otro dia");
+        }
+		System.out.println(hora + ":" + minutos + ":" + segundos);
+		sc.close();
+	}
 
-        scanner.close();  // Cerrar el scanner
-    }
 }

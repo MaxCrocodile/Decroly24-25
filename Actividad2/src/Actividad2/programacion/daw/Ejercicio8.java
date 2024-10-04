@@ -19,12 +19,6 @@ public class Ejercicio8 {
 		  System.out.println("Factorial de "+number+" es: "+fact);       
 		
 		
-		
-		
-		
-		
-		
-		
 		sc.close();
 	}
 
