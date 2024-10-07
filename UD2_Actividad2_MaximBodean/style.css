@@ -1,0 +1,86 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sección de Productos */
+.products {
+    display: flex; /* Mantiene todos los productos en una fila */
+    justify-content: space-between; /* Espacio uniforme entre los productos */
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.product {
+    position: relative; /* Permite posicionar el número sobre la imagen */
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 18%; /* Ajusta el ancho para que quepan cinco productos en una línea */
+}
+
+.product img {
+    max-width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+/* Estilo para los números sobre las imágenes */
+.number {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical */
+    left: 40px; /* Ajusta la posición horizontal */
+    background-color:rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: rgb(255, 255, 255); /* Color del texto */
+    border-radius: 50%; /* Hace el fondo circular */
+    width: 30px; /* Ancho del fondo */
+    height: 30px; /* Altura del fondo */
+    display: flex; /* Usado para centrar el número */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    font-size: 1rem; /* Tamaño de la fuente */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.person {
+    height: 200;
+}
+
