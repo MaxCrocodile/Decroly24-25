@@ -10,7 +10,7 @@ public class Ejercicio3 {
 		
 		System.out.println("Introduce 10 numeros:");
 		for (int i = 0 ; i < 10; i++) {
-			System.out.println("Numero " + i+1 + ":");
+			System.out.println("Numero " + (i+1) + ":");
 			numeros[i] = sc.nextDouble();
 		}
 		double max = numeros[0];
