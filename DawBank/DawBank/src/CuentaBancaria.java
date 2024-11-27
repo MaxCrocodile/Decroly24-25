@@ -33,7 +33,7 @@ public class CuentaBancaria {
         Random random = new Random();
         StringBuilder ibanBuilder = new StringBuilder(CODIGO_PAIS);
         
-        // Generamos los 22 dígitos del IBAN (el NIE puede hacer parte de ellos para asegurar unicidad)
+        // Generamos los 22 dígitos del IBAN
         for (int i = 0; i < 18; i++) {
             ibanBuilder.append(random.nextInt(10));
         }

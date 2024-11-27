@@ -1,51 +1,67 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <title>Carrito de compras</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="containerAll">
-      <div class="ContainerBig">
-        <div class="containerBig">
-          <div class="Productos">Producto</div>
-          <div class="Cantidades">Cantidad</div>
-          <div class="Unidades">Unidad</div>
-          <div class="Totales">Total</div>
-          <div class="Product1"><h2>Iphone 13 PRO</h2> <p> Ref:438FHJDJ64</p></div>
-          <div class="Product2"><h2>Cargador</h2> <p>Ref:JFDHFL6556</p></div>
-          <div class="Product3"><h2>Funda de piel</h2> <p>Ref:HDYE546PDR</p></div>
-          <div class="Cantidad1"></div>
-          <div class="Cantidad2"></div>
-          <div class="Cantidad3"></div>
-          <div class="Unidad1">900$</div>
-          <div class="Unidad2">50$</div>
-          <div class="Unidad3">79$</div>
-          <div class="Total1">0$</div>
-          <div class="Total2">0$</div>
-          <div class="Total3">0$</div>
-          <div class="A"></div>
-          <div class="Product1A"></div>
-          <div class="Product2A"></div>
-          <div class="Product3A"></div>
-          <div class="Cantidad"></div>
-          <div class="Unidad"></div>
-          <div class="Total"></div>
-          <div class="Product"></div>
-        </div>
+    <div class="ContainerBig">
+      <div class="header">
+        <div class="Productos">Producto</div>
+        <div class="Cantidades">Cantidad</div>
+        <div class="Unidades">Unidad</div>
+        <div class="Totales">Total</div>
       </div>
-
-        <div class="containerSmal">
-            <div class="TotalSmall">Total</div>
-            <div class="TotalSmall1">Total</div>
-            <div class="TotalSmallNum">0$</div>
+      <div class="row">
+        <div class="Product">
+          <h2>iPhone 13 Pro</h2>
+          <p class="Referencia">Ref: 0K3QOSOV4V</p>
         </div>
+        <div class="Cantidad">
+          <button class="btn">-</button>
+          <input type="number" value="0" class="input">
+          <button class="btn">+</button>
+        </div>
+        <div class="Unidad">938,99€</div>
+        <div class="Total">0€</div>
+      </div>
+      <div class="row">
+        <div class="Product">
+          <h2>Cargador</h2>
+          <p class="Referencia">Ref: TGD5X0RY1L</p>
+        </div>
+        <div class="Cantidad">
+          <button class="btn">-</button>
+          <input type="number" value="0" class="input">
+          <button class="btn">+</button>
+        </div>
+        <div class="Unidad">49,99€</div>
+        <div class="Total">0€</div>
+      </div>
+      <div class="row">
+        <div class="Product">
+          <h2>Funda de piel</h2>
+          <p class="Referencia">Ref: IOKW9BQ9F3</p>
+        </div>
+        <div class="Cantidad">
+          <button class="btn">-</button>
+          <input type="number" value="0" class="input">
+          <button class="btn">+</button>
+        </div>
+        <div class="Unidad">79,99€</div>
+        <div class="Total">0€</div>
+      </div>
+    </div>
+    <div class="ContainerSmal">
+      <div class="totalHeader">Total</div>
+      <div class="totalAmount">
+        <div class="totalLabel">TOTAL</div>
+        <div class="totalValue">0€</div>
+      </div>
+    </div>    
   </div>
 </body>
-
 </html>

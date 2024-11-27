@@ -21,7 +21,7 @@ public class DawBank {
         do {
             mostrarMenu();
             opcion = scanner.nextInt();
-            scanner.nextLine();  // Limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1 -> cuenta.mostrarDatos();
