@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.List;
 
 public class Cliente {
     private String dni;

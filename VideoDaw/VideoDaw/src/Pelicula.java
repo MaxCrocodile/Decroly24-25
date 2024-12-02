@@ -1,84 +1,27 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Pelicula {
-    private String cod;
+    private int id = 1;
     private String titulo;
-    private Genero genero;
+    private final Genero genero;
     private LocalDate fechaRegistro;
     private LocalDate fechaBaja;
     private LocalDateTime fechaAlquiler;
     private boolean isAlquilada;
 
-    public enum Genero {
+    public enum genero {
         DRAMA, COMEDIA, ACCION, TERROR, ROMANCE
     }
-}
 
-    public Pelicula() {
-    }
-
-    public Pelicula(String cod, String titulo, Genero genero, LocalDate fechaRegistro, LocalDate fechaBaja, LocalDateTime fechaAlquiler, boolean isAlquilada) {
-        this.cod = cod;
+    public Pelicula(String titulo, Genero genero, LocalDate fechaRegistro, LocalDate fechaBaja, LocalDateTime fechaAlquiler, boolean isAlquilada) {
+        this.id = id++;
         this.titulo = titulo;
-        this.genero = genero;
+        Pelicula.genero genero1 = genero.values();
+        this.genero = genero1 myVar : genero1.values();
         this.fechaRegistro = fechaRegistro;
         this.fechaBaja = fechaBaja;
         this.fechaAlquiler = fechaAlquiler;
-        this.isAlquilada = isAlquilada;
-    }
-
-    public String getCod() {
-        return cod;
-    }
-
-    public void setCod(String cod) {
-        this.cod = cod;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Genero getGenero() {
-        return genero;
-    }
-
-    public void setGenero(Genero genero) {
-        this.genero = genero;
-    }
-
-    public LocalDate getFechaRegistro() {
-        return fechaRegistro;
-    }
-
-    public void setFechaRegistro(LocalDate fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
-
-    public LocalDate getFechaBaja() {
-        return fechaBaja;
-    }
-
-    public void setFechaBaja(LocalDate fechaBaja) {
-        this.fechaBaja = fechaBaja;
-    }
-
-    public LocalDateTime getFechaAlquiler() {
-        return fechaAlquiler;
-    }
-
-    public void setFechaAlquiler(LocalDateTime fechaAlquiler) {
-        this.fechaAlquiler = fechaAlquiler;
-    }
-
-    public boolean isAlquilada() {
-        return isAlquilada;
-    }
-
-    public void setAlquilada(boolean isAlquilada) {
         this.isAlquilada = isAlquilada;
     }
 

@@ -6,7 +6,27 @@ public class GestionVideoDaw {
     }
     Scanner scanner = new Scanner(System.in);
 
+    int opcion;
+        do {
+        mostrarMenu();
+        opcion = scanner.nextInt();
+        scanner.nextLine();
 
+        switch (opcion) {
+            case 1 ->
+            case 2 ->
+            case 3 ->
+            case 4 ->
+            case 5 ->
+            case 6 ->
+            case 7 ->
+            case 8 -> System.out.println("Gracias por usar VideoDaw.");
+            default -> System.out.println("Opción no válida.");
+        }
+    } while (opcion != 8);
+
+        scanner.close();
+}
 
 
 
