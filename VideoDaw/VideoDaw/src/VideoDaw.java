@@ -1,3 +1,4 @@
+import java.io.OptionalDataException;
 import java.time.LocalDate;
 
 
@@ -17,45 +18,22 @@ public class VideoDaw {
     }
 
     public String getCif() {
-        return cif;
+        return this.cif;
     }
-
-    public void setCif(String cif) {
-        this.cif = cif;
-    }
-
     public String getDireccion() {
-        return direccion;
+        return this.direccion;
     }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public LocalDate getFechaAlta() {
-        return fechaAlta;
+        return this.fechaAlta;
     }
-
-    public void setFechaAlta(LocalDate fechaAlta) {
-        this.fechaAlta = fechaAlta;
-    }
-
     public Pelicula[] getPeliculasRegistradas() {
-        return peliculasRegistradas;
+        return this.peliculasRegistradas;
     }
-
-    public void setPeliculasRegistradas(Pelicula[] peliculasRegistradas) {
-        this.peliculasRegistradas = peliculasRegistradas;
-    }
-
     public Cliente[] getClientesRegistrados() {
-        return clientesRegistrados;
+        return this.clientesRegistrados;
     }
 
-    public void setClientesRegistrados(Cliente[] clientesRegistrados) {
-        this.clientesRegistrados = clientesRegistrados;
-    }
-
+    //metodo para mostrar info del video club
     public void mostrarInfoVideoClub () {
         System.out.println(cif);
         System.out.println(direccion);
@@ -64,6 +42,7 @@ public class VideoDaw {
         System.out.println(clientesRegistrados);
     }
 
+    //metodo para mostrar los peliulas registradas de un videoclub
     public void mostrarPeliculasRegistradas() {
         if (peliculasRegistradas == null || peliculasRegistradas.length == 0) {
             System.out.println("No hay películas registradas en el videoclub.");
@@ -78,6 +57,24 @@ public class VideoDaw {
         }
     }
 
+    //metodo para mostrar los clientes registrados de un videoclub
+    public void mostrarClientesRegistradas() {
+        if (clientesRegistrados == null || clientesRegistrados.length == 0) {
+            System.out.println("No hay clientes registrados en el videoclub.");
+            return;
+        }
+
+        System.out.println("Clientes registradas en el videoclub:");
+        for (Cliente cliente : clientesRegistrados) {
+            if (cliente != null) {
+                System.out.println(cliente.toString());
+            }
+        }
+    }
+
+    public void alquilarPelicula(Pelicula p){
+
+    }
 }
 
 

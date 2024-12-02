@@ -2,35 +2,51 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Pelicula {
-    private int id = 1;
+    private static int contador;
+
+    private int id;
     private String titulo;
-    private final Genero genero;
     private LocalDate fechaRegistro;
     private LocalDate fechaBaja;
     private LocalDateTime fechaAlquiler;
     private boolean isAlquilada;
 
-    public enum genero {
-        DRAMA, COMEDIA, ACCION, TERROR, ROMANCE
-    }
-
-    public Pelicula(String titulo, Genero genero, LocalDate fechaRegistro, LocalDate fechaBaja, LocalDateTime fechaAlquiler, boolean isAlquilada) {
-        this.id = id++;
+    public Pelicula(int id, String titulo, LocalDate fechaRegistro, LocalDate fechaBaja, LocalDateTime fechaAlquiler ) {
+        this.id = contador++;
         this.titulo = titulo;
-        Pelicula.genero genero1 = genero.values();
-        this.genero = genero1 myVar : genero1.values();
         this.fechaRegistro = fechaRegistro;
         this.fechaBaja = fechaBaja;
         this.fechaAlquiler = fechaAlquiler;
-        this.isAlquilada = isAlquilada;
+        this.isAlquilada = false;
+
     }
 
-    public void mostrarInfoPelicula() {
-        System.out.println("Codigo: " + cod);
-        System.out.println("Titulo: " + titulo);
-        System.out.println("Genero: " + genero);
-        System.out.println("Fecha de Registro: " + fechaRegistro);
-        System.out.println("Fecha de Baja: " + fechaBaja);
-        System.out.println("Fecha de Alquiler: " + fechaAlquiler);
-        System.out.println("Esta Alquilada: " + isAlquilada);
+    public int getId() {
+        return this.id;
     }
+    public String getTitulo() {
+        return this.titulo;
+    }
+    public LocalDate getFechaRegistro() {
+        return this.fechaRegistro;
+    }
+    public LocalDate getFechaBaja() {
+        return this.fechaBaja;
+    }
+    public LocalDateTime getFechaAlquiler() {
+        return this.fechaAlquiler;
+    }
+    public boolean isAlquilada() {
+        return this.isAlquilada;
+    }
+    public void setAlquilada(boolean alquilada) {
+        isAlquilada = alquilada;
+    }
+
+    public String mostrarInfoPelicula(){
+        return String.format("ID: %s, Titulo: %s, Fecha Registro: %s,Fecha Alquiler: %s, Fecha Baja: %s, Es Alquilada: %s",
+                this.id, this.titulo, this.fechaRegistro,this.fechaAlquiler, this.fechaBaja, this.isAlquilada);
+    }
+
+    //to do : metodo para mostrar los peliculas disponibles,metodo para alquilar pelicula.
+}
