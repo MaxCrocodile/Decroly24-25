@@ -1,8 +1,10 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.*;
 
 public class Pelicula {
-    private static int contador;
+    private static int contador = 1;
+    private Map<Integer, Pelicula> peliculaDataBase = new HashMap<>();
 
     private int id;
     private String titulo;
@@ -11,12 +13,12 @@ public class Pelicula {
     private LocalDateTime fechaAlquiler;
     private boolean isAlquilada;
 
-    public Pelicula(int id, String titulo, LocalDate fechaRegistro, LocalDate fechaBaja, LocalDateTime fechaAlquiler ) {
-        this.id = contador++;
+    public Pelicula(int id, String titulo, LocalDate fechaRegistro, boolean isAlquilada) {
+        this.id = id;
         this.titulo = titulo;
         this.fechaRegistro = fechaRegistro;
-        this.fechaBaja = fechaBaja;
-        this.fechaAlquiler = fechaAlquiler;
+        this.fechaBaja = fechaBaja = null;
+        this.fechaAlquiler = fechaAlquiler = null;
         this.isAlquilada = false;
 
     }
@@ -48,5 +50,33 @@ public class Pelicula {
                 this.id, this.titulo, this.fechaRegistro,this.fechaAlquiler, this.fechaBaja, this.isAlquilada);
     }
 
-    //to do : metodo para mostrar los peliculas disponibles,metodo para alquilar pelicula.
+    public String registrarPelicula() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Auto ID
+        int id = contador++;
+
+        // Nombre de pelicula
+        System.out.print("Escribe el nombre de la pelicula: ");
+        String titulo = scanner.nextLine();
+
+        // Set fecha de hoy
+        LocalDate fechaRegistro = LocalDate.now();
+
+
+        boolean isAlquilada = false;
+
+        // Create a new movie and add it to the database
+        Pelicula newPelicula = new Pelicula(id, titulo, fechaRegistro, isAlquilada);
+        peliculaDataBase.put(id, newPelicula);
+
+        return "Pelicula \"" + titulo + "\" registrada " + LocalDate.now() + ".";
+    }
+
+
+
+
+
+
+    //to do : metodo para registrar pelicula,metodo para mostrar los peliculas disponibles,metodo para alquilar pelicula.
 }

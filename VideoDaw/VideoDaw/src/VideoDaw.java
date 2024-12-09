@@ -72,9 +72,6 @@ public class VideoDaw {
         }
     }
 
-    public void alquilarPelicula(Pelicula p){
-
-    }
 }
 
 
