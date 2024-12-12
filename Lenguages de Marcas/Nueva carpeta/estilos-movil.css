@@ -1,0 +1,53 @@
+
+/* Media Queries para dispositivos móviles */
+    body {
+        overflow-x: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu {
+        flex-direction: column; /* Apila los elementos del menú */
+        align-items: center;
+        gap: 0; /* Sin espacios entre los elementos */
+    }
+
+    .menu a {
+        width: 100%; /* Cada enlace ocupa todo el ancho */
+        padding: 0.5rem 0;
+    }
+
+    .diseno-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    td {
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        display: none;
+    }
+
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
